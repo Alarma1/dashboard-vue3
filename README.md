@@ -1,29 +1,9 @@
-# vue-project
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+[Демо](https://alarma1.github.io/dashboard-vue3-demo/#/)  
+Страница 404 открывается  при введении любого неправильного url.  
+[Пример страницы 404](https://alarma1.github.io/dashboard-vue3-demo/#/1)  
+[Ссылка на проект](https://github.com/Alarma1/dashboard-vue3)
+# Тестовое техническое задание 
+Требуется сверстать dashboard и 404 страницу.  
+Адаптив: по десктоп и мобильное устройство.  
+Данные для графика нагенерировать и брать из store.  
+Стек: Vue js 3, Chart.js, использовать препроцессоров по желанию.

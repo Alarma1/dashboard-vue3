@@ -2,21 +2,41 @@ import {defineStore} from 'pinia'
 
 export const useMainStore = defineStore('Main', {
     state: () => ({
+        darkMode: false,
+        mainMenu: [
+            {id: 1, icon: 'pie', name: 'Overview', rowType: 'none', view: false},
+            {id: 2, icon: 'doc', name: 'Pages', subMenu: [], rowType: 'default', view: true},
+            {
+                id: 3,
+                icon: 'bag',
+                name: 'Sales',
+                subMenu: ['Product List', 'Billing', 'Invoice'],
+                rowType: 'default',
+                view: true
+            },
+
+            {id: 4, icon: 'inbox', name: 'Messages', subMenu: [], rowType: 'mess', view: false},
+            {id: 5, icon: 'lock', name: 'Authentication', subMenu: [], rowType: 'default', view: true},
+            {id: 6, icon: '', name: '', rowType: 'separator', subMenu: [], view: null},
+            {id: 7, icon: 'clList', name: 'Docs', subMenu: [], rowType: 'default', view: true},
+            {id: 8, icon: 'collection', name: 'Components', subMenu: [], rowType: 'default', view: true},
+            {id: 9, icon: 'support', name: 'Help', subMenu: [], rowType: 'default', view: true},
+        ],
         clients: [
-            {img: 'Neil', name: 'Neil Sims', mail: 'email@example.com', sum: 367},
-            {img: 'Bonnie', name: 'Bonnie Green', mail: 'email@example.com', sum: 67},
-            {img: 'Micheal', name: 'Micheal Gough', mail: 'email@example.com', sum: 3467},
-            {img: 'Thomas', name: 'Thomas Lean', mail: 'email@example.com', sum: 2367},
-            {img: 'Lana', name: 'Lana Byrd', mail: 'email@example.com', sum: 367},
-            {img: 'Karen', name: 'Karen Nelson', mail: 'email@example.com', sum: 1367}
+            {img: 'Neil', title: 'Neil Sims', subTitle: 'email@example.com', Quantity: 367},
+            {img: 'Bonnie', title: 'Bonnie Green', subTitle: 'email@example.com', Quantity: 67},
+            {img: 'Micheal', title: 'Micheal Gough', subTitle: 'email@example.com', Quantity: 3467},
+            {img: 'Thomas', title: 'Thomas Lean', subTitle: 'email@example.com', Quantity: 2367},
+            {img: 'Lana', title: 'Lana Byrd', subTitle: 'email@example.com', Quantity: 367},
+            {img: 'Karen', title: 'Karen Nelson', subTitle: 'email@example.com', Quantity: 1367}
         ],
         products: [
-            {title: 'Restaurant Booking App', description: 'React & Bootstrap Framework', sales: 70},
-            {title: 'UI Kit', description: 'React & Bootstrap Framework', sales: 54},
-            {title: 'Design System Pro', description: 'Bootstrap Framework', sales: 47},
-            {title: 'Dashboard', description: 'Tailwind, React', sales: 43},
-            {title: 'Glassmorphism UI', description: 'Vue Js, Tailwind ', sales: 38},
-            {title: 'Multipurpose Template', description: 'React & Bootstrap Framework', sales: 22},
+            {title: 'Restaurant Booking App', subTitle: 'React & Bootstrap Framework', Quantity: 70},
+            {title: 'UI Kit', subTitle: 'React & Bootstrap Framework', Quantity: 54},
+            {title: 'Design System Pro', subTitle: 'Bootstrap Framework', Quantity: 47},
+            {title: 'Dashboard', subTitle: 'Tailwind, React', Quantity: 43},
+            {title: 'Glassmorphism UI', subTitle: 'Vue Js, Tailwind ', Quantity: 38},
+            {title: 'Multipurpose Template', subTitle: 'React & Bootstrap Framework', Quantity: 22},
         ],
         transactions: [
             {
@@ -139,6 +159,10 @@ export const useMainStore = defineStore('Main', {
             maintainAspectRatio: false
         },
     }),
-
+    actions: {
+        isDarkModeAction() {
+            this.darkMode = !this.darkMode
+        },
+    },
 })
 

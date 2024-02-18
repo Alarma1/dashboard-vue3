@@ -1,13 +1,13 @@
 // tailwind.config.js
 module.exports = {
     purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
         fontFamily: {
             sans: ['Inter-Regular', 'sans-serif'],
-            interSemibold:['Inter-Semibold', 'sans-serif'],
-            interBold:['Inter-Bold', 'sans-serif'],
-            interMedium:['Inter-Medium', 'sans-serif'],
+            interSemibold: ['Inter-Semibold', 'sans-serif'],
+            interBold: ['Inter-Bold', 'sans-serif'],
+            interMedium: ['Inter-Medium', 'sans-serif'],
         },
         extend: {
             colors: {

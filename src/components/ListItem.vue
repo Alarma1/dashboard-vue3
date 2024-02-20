@@ -1,9 +1,9 @@
 <template>
 
-    <div class="">
+    <div class="md:mt-6 md:mx-6">
         <h2 class="text-xl font-interSemibold text-grey-900 dark:text-grey-200">{{ headerList }}</h2>
     </div>
-    <div class="md:h-[381px] h-[354px] mt-4">
+    <div class="md:mt-4 md:mb-6 md:mx-6">
         <div class="py-[9px] flex justify-between items-center"
              :class="{'border-b-[1px]' : index !==  items.length -1}"
              v-for="(item, index) in items" :key="index"

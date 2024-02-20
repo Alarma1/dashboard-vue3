@@ -47,6 +47,7 @@
         setup() {
             const elemId = ref(null)
             const openMenu = (elem) => {
+                elemId.value = null
                 elemId.value = elemId.value === null && elem.view ? elem.id : null
             }
             return {
